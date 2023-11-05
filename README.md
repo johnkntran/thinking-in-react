@@ -1,6 +1,6 @@
-# React
+# Thinking in React
 
-This is a basic boilerplate project using [Visual Studio Code](https://code.visualstudio.com) with [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) and [Vite](https://vitejs.dev/) to scaffold a barebones [React](https://react.dev/) application.
+This is how I attempted the [Thinking in React](https://react.dev/learn/thinking-in-react) tutorial. It's scaffolded from a VS Code Dev Container using Vite.
 
 ## Setup
 - Open the [devcontainer.json](./.devcontainer/devcontainer.json) file and update the `"name"` field to the name of your project. Also update the `"postCreateCommand"` hook to use your Git username and email if needed.
