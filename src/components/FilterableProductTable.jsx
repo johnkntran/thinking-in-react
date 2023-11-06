@@ -10,6 +10,8 @@ export default function FilterableProductTable(props) {
       <SearchBar
         searchTerm={searchTerm}
         inStock={inStock}
+        onSearchTermChange={setSearchTerm}
+        onInStockChange={setInStock}
       />
       <ProductTable
         products={props.products}
