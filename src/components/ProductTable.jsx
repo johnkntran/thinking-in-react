@@ -14,12 +14,19 @@ export default function ProductTable(props) {
       );
       category = product.category;
     }
-    rows.push(
-      <ProductRow
-        product={product}
-        key={product.name}
-      />
-    );
+    if (
+      !props.searchTerm ||
+      product.name.toLowerCase().includes(props.searchTerm.toLowerCase())
+    ) {
+      if (!props.inStock || product.stocked) {
+        rows.push(
+          <ProductRow
+            product={product}
+            key={product.name}
+          />
+        );
+      }
+    }
   }
   return (
     <table>
