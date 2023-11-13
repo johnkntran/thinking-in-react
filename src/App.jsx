@@ -1,9 +1,12 @@
 import FilterableProductTable from "./components/FilterableProductTable";
+import { AuthProvider } from "./components/AuthProvider";
 import data from "./data";
 
 
 export default function App() {
   return (
-    <FilterableProductTable products={data} />
+    <AuthProvider>
+      <FilterableProductTable products={data} />
+    </AuthProvider>
   );
 }

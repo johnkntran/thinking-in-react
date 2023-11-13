@@ -1,4 +1,8 @@
+import { useContext } from 'react';
+import { AuthContext } from './AuthProvider';
+
 export default function SearchBar(props) {
+  const user = useContext(AuthContext);
   return (
     <form>
       <input
@@ -15,6 +19,7 @@ export default function SearchBar(props) {
         />
         <label>Only show products in stock</label>
       </div>
+      <aside>Current user is: {user.id ? `#${user.id} ${user.name}` : ''}</aside>
     </form>
   );
 }
